@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\JmdSpWebShell]
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\JmdSpWebShell\DefaultIcon]
+@="D:\\rtmp\\ffmpeg.bat,1"
+[HKEY_CLASSES_ROOT\JmdSpWebShell\shell]
+
+[HKEY_CLASSES_ROOT\JmdSpWebShell\shell\open]
+
+[HKEY_CLASSES_ROOT\JmdSpWebShell\shell\open\command]
+
+@="D:\\rtmp\\ffmpeg.bat \"%1\""

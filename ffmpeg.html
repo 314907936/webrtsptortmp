@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>调起FFMPEG实时推流</title>
+<script src="rtmpapp.js"></script>
+</head>
+
+<body>
+<input type="button" value="开始推送rtsp流" id="startrtmp" />
+<input type="button" value="结束推送rtsp流" id="stoprtmp" />
+<script>
+var $ = function(id){
+	return document.getElementById(id);
+}
+
+$("startrtmp").onclick = function(){
+	RtmpObj.init('c','JMDSP303_001','2018120256139','rtsp://admin:99114@192.168.1.10:554/H.264/ch1/main/av_stream','rtmp://xvs-tcp-input.zhiboyun.com/live?user_name=jmdu1$password=abs1$service_code=JMDSJSP$opaque=','0').creatrtmpstr().startrtmp();
+}
+$("stoprtmp").onclick = function(){
+	RtmpObj.init('','','','','','1').creatrtmpstr().endrtmp();
+}
+</script>
+</body>
+</html>
